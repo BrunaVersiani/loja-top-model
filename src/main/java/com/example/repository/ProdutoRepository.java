@@ -1,6 +1,7 @@
 package com.example.repository;
 
-import com.example.model.Produto;
+import com.example.model.produto.Produto;
+import com.example.exception.ResourceNotFoundException;
 import org.springframework.stereotype.Repository;
 
 import java.util.*;
@@ -60,7 +61,7 @@ public class ProdutoRepository {
         Optional<Produto> produtoEncontrado = obterPorId(produto.getId());
 
         if(produtoEncontrado.isEmpty()){
-            throw new InputMismatchException("Produto não encontrado.");
+            throw new ResourceNotFoundException("Produto não encontrado.");
         }
 
         // depois remover o produto antigo(desatualizado) da lista
