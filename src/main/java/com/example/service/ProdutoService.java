@@ -1,7 +1,7 @@
 package com.example.service;
 
 import com.example.model.produto.Produto;
-import com.example.repository.ProdutoRepository;
+import com.example.repository.ProdutoRepository_old;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Optional;
 public class ProdutoService {
 
     @Autowired
-    private ProdutoRepository produtoRepository;
+    private ProdutoRepository_old produtoRepository;
 
     /**
      * Metodo que retorna uma lista de produtos, a logica de busca
